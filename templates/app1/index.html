@@ -1,0 +1,26 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <!-- Forms  -->
+    <div class="row">
+        <div class="col col-8 offset-2">
+                <h3 class="alert alert-warning text-center">Employee Registation Form</h3>
+    <form  method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="submit" class="btn btn-primary">
+        <a href="{% url 'list' %}" class="btn btn-primary"> Go to Emlpoyee List</a>
+    </form>
+</div>
+</div>
+
+
+<!-- Dispalay Data -->
+
+
+  
+
+</div>
+    {% endblock content %}
